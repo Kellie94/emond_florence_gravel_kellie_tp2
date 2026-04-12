@@ -1,9 +1,85 @@
+/* Police */
 .racing-sans-one-regular {
   font-family: "Racing Sans One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-/*:root {
-    
-}*/
+/* Root du projet */
+:root {
+  /* Couleurs */
+    --bg-color: #3A9D23;
+    --primary-color: ;
+    --secondary-color: ;
+    --accent-color: ;
+
+  /* Radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-full: 99999px;
+
+  /* Taille police */
+    --font-sm: 0.5rem;
+    --font-base: 1rem;
+    --font-md: 2rem;
+}
+
+/* CSS général */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: "Racing Sans One", sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* CSS entête avec le logo et le titre */
+
+
+/* Piste de course et les deux voitures */
+.main-cars {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  margin: 50px auto;
+  background-image: url(./assets/img/circuit-petit.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+}
+
+.car {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  bottom: 145px;
+  left: 90px;
+  transition: left 2s linear;
+  z-index: 1;
+}
+
+.car1 {
+  bottom: 330px;
+  left: 0;
+  background-image: url("./assets/img/voiture-bleu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 30px;
+}
+
+.car2 {
+  bottom: 250px;
+  left: 0;
+  background-image: url("./assets/img/voiture-rouge.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 30px;
+}

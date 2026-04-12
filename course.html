@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Course de Voitures</title>
     <link rel="stylesheet" href="./course.css">
+    <script src="./course.js"></script>
     <!-- Police -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="" alt="Logo en forme de deux drapeaux croisés carreautés noirs et blancs ">
-
+    <!-- Entête avec logo et titre -->
+    <header class="header">
+        <img src="./assets/img/logo.png" alt="Logo en forme de deux drapeaux croisés en damier noir et blanc" width="200" class="header-logo">
+        <h1 class="header-title">Course de Voitures</h1>
     </header>
-    <main>
 
+    <!--Contenu principal-->
+    <main class="main">
+        <section class="main-cars">
+            <div class="car car1"></div>
+            <div class="car car2"></div>
+        </section>
+    <!--Section chrono et bouton démarrer-->
+    <!--Je ne suis pas certaine de comment faire dans html pour les chronos-->
+        <section class="main-informations">
+            <div class="chrono">
+                <p class="chrono-car car--bleu"></p>
+                <p class="chrono-car"></p>
+            </div>
+            <button class="button" onclick="demarrerCourse()"> Démarrer la Course</button>
+            <div>
+                <p class="rebours"></p>
+            </div>
+        </section>
     </main>
-    <footer>
 
+    <!--Footer crédits-->
+    <footer>
+        <p>Créer par Florence Emond et Kellie Gravel</p>
     </footer>
 </body>
 </html>
