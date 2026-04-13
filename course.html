@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course de Voitures</title>
+    <!-- Liens -->
     <link rel="stylesheet" href="./course.css">
-    <script src="./course.js"></script>
     <!-- Police -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <!-- Entête avec logo et titre -->
     <header class="header">
         <img src="./assets/img/logo.png" alt="Logo en forme de deux drapeaux croisés en damier noir et blanc" width="200" class="header-logo">
-        <h1 class="header-title">Course de Voitures</h1>
+        <h1 class="header-title">COURSE DE VOITURES</h1>
     </header>
 
     <!--Contenu principal-->
@@ -27,20 +27,22 @@
     <!--Section chrono et bouton démarrer-->
     <!--Je ne suis pas certaine de comment faire dans html pour les chronos-->
         <section class="main-informations">
+            <div>
+                <p id="compteARebours"></p>
+            </div>
             <div class="chrono">
                 <p class="chrono-car car--bleu"></p>
                 <p class="chrono-car"></p>
             </div>
-            <button class="button" onclick="demarrerCourse()"> Démarrer la Course</button>
-            <div>
-                <p class="rebours"></p>
-            </div>
+            <button class="button" onclick="demarrerCourse(), compteARebour()"> DÉMARRER LA COURSE</button>
         </section>
     </main>
+    
 
     <!--Footer crédits-->
     <footer>
-        <p>Créer par Florence Emond et Kellie Gravel</p>
+        <p>Créé par Florence Emond et Kellie Gravel - 420V11-MO</p>
     </footer>
+    <script src="./course.js"></script>
 </body>
 </html>
