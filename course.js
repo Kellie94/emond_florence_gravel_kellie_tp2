@@ -6,16 +6,10 @@ let car2 = document.getElementsByClassName("car2");
 let translationX1 = 0;
 let translationX2 = 0;
 
-let selecteurContainerWidth = document.querySelector(".mains-car");
-let containerWidth = window.getComputedStyle(main-cars).width;   //Met valeur de la largeur de l'élément dans une variable
-//.getPropertyValue("width"); 
-console.log(containerWidth);
-alert(containerWidth);
+let containerWidth = parseFloat(1500);  // À modifier si on a du temps
+let voiture1Width = parseFloat(120);
+let voiture2Width = parseFloat(120);
 
-//let selecteurVoiture1Width = document.querySelector(".car1");
-//let voiture1Width = window.getComputedStyle(myDiv).getPropertyValue("width");
-//let selecteurVoiture2Width = document.querySelector(".car2");
-//let voiture2Width = window.getComputedStyle(myDiv).getPropertyValue("width");
 
 function compteARebour() {
     let seconde = 6;
@@ -39,11 +33,9 @@ function chronometre() {
 
 
 function aleatoireTranslationX() {
-    let maxTranslationX = containerWidth - voiture1Width;
-    let valeurAleatoire = Math.random() * (maxTranslationX + 1);
-    valeurAleatoire = valeurAleatoire * maxTranslationX;
-    valeurAleatoire = Math.floor(valeurAleatoire);
-    alert(valeurAleatoire);
+    let maxTranslationX = containerWidth - voiture1Width;   //Calculer la valeur maximale de déplacement horizontal.
+    let valeurAleatoire = Math.random() * (maxTranslationX + 1);    //Générer un nombre entre 0 et maxTranslationX.
+    valeurAleatoire = Math.floor(valeurAleatoire);  //Arrondir le nombre.
 }
 
 
@@ -54,5 +46,6 @@ function deplacerVoiture() {
 
 function demarrerCourse() {
     compteARebour();
+    aleatoireTranslationX();
     
 }
