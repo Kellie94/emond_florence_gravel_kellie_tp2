@@ -5,6 +5,8 @@
   font-style: normal;
 }
 
+
+
 /* Root du projet */
 :root {
   /* Couleurs */
@@ -27,6 +29,8 @@
     --font-xxl: 7rem;
 }
 
+
+
 /* CSS général */
 * {
   box-sizing: border-box;
@@ -42,8 +46,6 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-
-/* CSS entête avec le logo et le titre */
 
 
 /* Piste de course et les deux voitures */
@@ -63,8 +65,6 @@ body {
 
 .car {
   position: absolute;
-  bottom: 145px;
-  left: 90px;
   transition: left 2s linear;
   z-index: 1;
   border-style: none;
@@ -74,7 +74,7 @@ body {
 .car1 {
   bottom: 185px;
   left: 30px;
-  background-image: url("./assets/img/voiture-bleu.png");
+  /*background-image: url("./assets/img/voiture-bleu.png");*/
   background-size: contain;
   background-repeat: no-repeat;
   width: 120px;
@@ -83,15 +83,17 @@ body {
 
 .car2 {
   bottom: 70px;
-  left: 40px;
-  background-image: url("./assets/img/voiture-rouge.png");  
+  left: 30px;
+  /*background-image: url("./assets/img/voiture-rouge.png");*/
   background-size: contain;
   background-repeat: no-repeat;
-  width: 110px;
+  width: 120px;
   height: 70px;
 }
 
-/* Bouton démarrer*/
+
+
+/* Bouton démarrer */
 .button {
   margin: 20px;
   padding: 20px 35px 20px 35px;
@@ -112,6 +114,8 @@ body {
   border-color: #1b0505;
 }
 
+
+
 /* Texte de bas de page */
 footer p {
   margin-top: 200px;
@@ -119,6 +123,8 @@ footer p {
   color: white;
   text-shadow: 2px 2px #3a6430;
 }
+
+
 
 /* Titre */
 h1 {
@@ -130,15 +136,18 @@ h1 {
   text-shadow: 2px 2px #3a6430;
 }
 
+
+
 /* Compte à rebours */
 #compteARebours {
   position: absolute;
   text-align: center;
   top: 320px;
-  left: 49.3%;
+  left: 49%;
 
   color: white;
   -webkit-text-stroke: 3px black;
   text-shadow: 3px 3px #bb1414;
   font-size: var(--font-xxl);
 }
+
