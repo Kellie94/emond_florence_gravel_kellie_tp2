@@ -36,16 +36,17 @@ function aleatoireTranslationX() {
     let maxTranslationX = containerWidth - voiture1Width;   //Calculer la valeur maximale de déplacement horizontal.
     let valeurAleatoire = Math.random() * (maxTranslationX + 1);    //Générer un nombre entre 0 et maxTranslationX.
     valeurAleatoire = Math.floor(valeurAleatoire);  //Arrondir le nombre.
+    return valeurAleatoire; //Permet de retourner la valeur de valeurAleatoire vers une autre fonction.
 }
+
 
 
 function deplacerVoiture() {
-
+    let valeurAleatoire = aleatoireTranslationX();  //Met la valeur de valeurAleatoire de la fonction aleatoireTranslationX() dans une variable valeurAleatoire dans la fonction deplacerVoiture().
 }
 
 
-function demarrerCourse() {
+function demarrerCourse() {  
     compteARebour();
     aleatoireTranslationX();
-    
 }
