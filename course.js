@@ -1,52 +1,77 @@
-
-/* Variables */ 
+/*| VARIABLES |*/ 
 let car1 = document.getElementsByClassName("car1");
 let car2 = document.getElementsByClassName("car2");
 
 let translationX1 = 0;
 let translationX2 = 0;
 
-let containerWidth = parseFloat(1500);  // À modifier si on a du temps
+let containerWidth = parseFloat(1500);  
 let voiture1Width = parseFloat(120);
 let voiture2Width = parseFloat(120);
 
 
+
+/*| COPMTE À REBOUR |*/
 function compteARebour() {
     let seconde = 6;
     let compteARebours = document.getElementById("compteARebours");
 
-    let compteur = setInterval(() => { //répete les actions à faire selon une intervale
+    let compteur = setInterval(() => {          //Répète les actions à faire selon une intervale
         seconde--;
         compteARebours.textContent = seconde;   //Contenu du p avec id compteARebours dans le html, il contient les secondes qui défilent
 
         if (seconde <= 0) {
-            clearInterval(compteur); //arrête le setInterval
-            compteARebours.textContent = ""; //Compteur n'affiche plus de données
+            clearInterval(compteur);            //Arrête le setInterval
+            compteARebours.textContent = "";    //Compteur n'affiche plus de données
         }
-    },1000); //intervale qui agit à chaque seconde (1000ms = 1sec)
+    },1000);                                    //Intervale qui agit à chaque seconde (1000ms = 1sec)
 }
 
 
+
+/*| CHRONOMÈTRE |*/
 function chronometre() {
 
 }
 
 
+
+/*| TRANSLATION ALÉATOIRE |*/
 function aleatoireTranslationX() {
-    let maxTranslationX = containerWidth - voiture1Width;   //Calculer la valeur maximale de déplacement horizontal.
+    let maxTranslationX = containerWidth - voiture1Width;           //Calculer la valeur maximale de déplacement horizontal.
     let valeurAleatoire = Math.random() * (maxTranslationX + 1);    //Générer un nombre entre 0 et maxTranslationX.
-    valeurAleatoire = Math.floor(valeurAleatoire);  //Arrondir le nombre.
-    return valeurAleatoire; //Permet de retourner la valeur de valeurAleatoire vers une autre fonction.
+    valeurAleatoire = Math.floor(valeurAleatoire);                  //Arrondir le nombre.
+    return valeurAleatoire;                                         //Permet de retourner la valeur de valeurAleatoire vers une autre fonction.
 }
 
 
 
+/*| DÉPLACER VOITURE |*/
 function deplacerVoiture() {
-    let valeurAleatoire = aleatoireTranslationX();  //Met la valeur de valeurAleatoire de la fonction aleatoireTranslationX() dans une variable valeurAleatoire dans la fonction deplacerVoiture().
+    let maxTranslationX = containerWidth - voiture1Width;           //Calculer la valeur maximale de déplacement horizontal.
+    let root = document.documentElement;                            //Permet d'accéder aux élément de style du root.
+
+    setInterval(() => {                                                 //Répète les actions à faire selon une intervale
+        translationX1 = translationX1 + aleatoireTranslationX();        //Valeur de la translation
+        root.style.setProperty("--left-car1", translationX1  + "px");   //Change la valeur left de la voiture par la valeur de la translation
+
+        translationX2 = translationX2 + aleatoireTranslationX();
+        root.style.setProperty("--left-car2", translationX2 + "px");
+
+        if (translationX1 >= maxTranslationX) {
+        root.style.setProperty("--left-car1", maxTranslationX + "px");  //Permet de faire la translation jusqu'à la ligne d'arrivée
+        }
+        if (translationX2 >= maxTranslationX) {
+        root.style.setProperty("--left-car2", maxTranslationX + "px");
+        }
+    },1000);                                                            //Intervale qui agit à chaque seconde (1000ms = 1sec)
 }
 
 
+    
+/*| DÉMARRER COURSE |*/
 function demarrerCourse() {  
     compteARebour();
     aleatoireTranslationX();
+    deplacerVoiture();
 }
