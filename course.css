@@ -1,4 +1,4 @@
-/* Police */
+/*| POLICE |*/
 .racing-sans-one-regular {
   font-family: "Racing Sans One", sans-serif;
   font-weight: 400;
@@ -7,7 +7,7 @@
 
 
 
-/* Root du projet */
+/*| ROOT |*/
 :root {
   /* Couleurs */
     --bg-color: #549246;
@@ -27,11 +27,15 @@
     --font-l: 2rem;
     --font-xl: 3rem;
     --font-xxl: 7rem;
+
+  /* Left voitures */
+    --left-car1: 0px;
+    --left-car2: 0px;
 }
 
 
 
-/* CSS général */
+/*| GÉNÉRAL |*/
 * {
   box-sizing: border-box;
 }
@@ -48,9 +52,11 @@ body {
 }
 
 
-/* Piste de course et les deux voitures */
+
+/*| VOITURES ET PISTE |*/
 .main-cars {
   position: relative;
+  
   width: 1500px;
   height: 335px;
   margin: 70px auto;
@@ -73,7 +79,7 @@ body {
 
 .car1 {
   bottom: 185px;
-  left: 30px;
+  left: var(--left-car1);
   /*background-image: url("./assets/img/voiture-bleu.png");*/
   background-size: contain;
   background-repeat: no-repeat;
@@ -83,7 +89,7 @@ body {
 
 .car2 {
   bottom: 70px;
-  left: 30px;
+  left: var(--left-car2);
   /*background-image: url("./assets/img/voiture-rouge.png");*/
   background-size: contain;
   background-repeat: no-repeat;
@@ -93,7 +99,7 @@ body {
 
 
 
-/* Bouton démarrer */
+/*| BOUTON |*/
 .button {
   margin: 20px;
   padding: 20px 35px 20px 35px;
@@ -116,7 +122,7 @@ body {
 
 
 
-/* Texte de bas de page */
+/*| FOOTER - TITRE |*/
 footer p {
   margin-top: 200px;
   font-size: var(--font-base);
@@ -126,7 +132,7 @@ footer p {
 
 
 
-/* Titre */
+/*| HEADER - TITRE |*/
 h1 {
   padding: 0;
   margin: 0;
@@ -138,7 +144,7 @@ h1 {
 
 
 
-/* Compte à rebours */
+/*| COMPTE À REBOUR |*/
 #compteARebours {
   position: absolute;
   text-align: center;
