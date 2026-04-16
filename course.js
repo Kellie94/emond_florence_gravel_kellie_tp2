@@ -9,11 +9,11 @@ let containerWidth = parseFloat(1500);
 let voiture1Width = parseFloat(120);
 let voiture2Width = parseFloat(120);
 
-
+let seconde = 6;
 
 /*| COPMTE À REBOUR |*/
 function compteARebour() {
-    let seconde = 6;
+
     let compteARebours = document.getElementById("compteARebours");
 
     let compteur = setInterval(() => {          //Répète les actions à faire selon une intervale
@@ -96,7 +96,9 @@ function deplacerVoiture() {
 /*| DÉMARRER COURSE |*/
 function demarrerCourse() {  
     compteARebour();
-    aleatoireTranslationX();
-    deplacerVoiture();
-    chronometre()
+    //if (seconde == 0) {
+        aleatoireTranslationX();
+        deplacerVoiture();
+        chronometre();
+    //}
 }
