@@ -31,7 +31,31 @@ function compteARebour() {
 
 /*| CHRONOMÈTRE |*/
 function chronometre() {
+  const TEMPSVOITUREBLEU = document.getElementById("chronobleu");   //Permet d'afficher les chronos en temps réel
+  const TEMPSVOITUREROUGE = document.getElementById("chronorouge");
 
+  if (demarrerCourse.started) return;                               //Empêcher plusieurs lancements à l'appuie de bouton
+  demarrerCourse.started = true;
+
+  const DEBUTTEMPS = Date.now();                                    //Aller chercher date actuel au moment du clic
+
+  function update() {                                               
+    const TEMPSECOULE = Date.now() - DEBUTTEMPS;                    //Calcule les minutes, secondes et millisecondes entre le temps de départ et celui actuel
+    const minutes = Math.floor(TEMPSECOULE / 60000);
+    const secondes = Math.floor((TEMPSECOULE % 60000) / 1000);
+    const millisecondes = TEMPSECOULE % 1000;
+
+    const TEMPS =                                                   //Permet d'écrire les chiffres en lettre et de placer des zeros dans les espaces "vides"
+      String(minutes).padStart(2, "0") + ":" +
+      String(secondes).padStart(2, "0") + ":" +
+      String(millisecondes).padStart(3, "0");
+
+    TEMPSVOITUREBLEU.textContent = TEMPS;                           //Mise à jour des balises correspondantes des deux chronos pour la voiture bleu et rouge
+    TEMPSVOITUREROUGE.textContent = TEMPS;
+
+    requestAnimationFrame(update);                                  //Permet d'actualiser à chaque 60secondes
+  }
+  update();
 }
 
 
@@ -74,4 +98,5 @@ function demarrerCourse() {
     compteARebour();
     aleatoireTranslationX();
     deplacerVoiture();
+    chronometre()
 }
