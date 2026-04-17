@@ -9,24 +9,6 @@ let containerWidth = parseFloat(1500);
 let voiture1Width = parseFloat(120);
 let voiture2Width = parseFloat(120);
 
-let seconde = 6;
-
-/*| COPMTE À REBOUR |*/
-function compteARebour() {
-
-    let compteARebours = document.getElementById("compteARebours");
-
-    let compteur = setInterval(() => {          //Répète les actions à faire selon une intervale
-        seconde--;
-        compteARebours.textContent = seconde;   //Contenu du p avec id compteARebours dans le html, il contient les secondes qui défilent
-
-        if (seconde <= 0) {
-            clearInterval(compteur);            //Arrête le setInterval
-            compteARebours.textContent = "";    //Compteur n'affiche plus de données
-        }
-    },1000);                                    //Intervale qui agit à chaque seconde (1000ms = 1sec)
-}
-
 
 
 /*| CHRONOMÈTRE |*/
@@ -96,9 +78,24 @@ function deplacerVoiture() {
 /*| DÉMARRER COURSE |*/
 function demarrerCourse() {  
     compteARebour();
-    //if (seconde == 0) {
-        aleatoireTranslationX();
-        deplacerVoiture();
-        chronometre();
-    //}
+
+    /*| COMPTE À REBOUR |*/
+    function compteARebour() {
+        let seconde = 6;
+        let compteARebours = document.getElementById("compteARebours");
+
+        let compteur = setInterval(() => {          //Répète les actions à faire selon une intervale
+            seconde--;
+            compteARebours.textContent = seconde;   //Contenu du p avec id compteARebours dans le html, il contient les secondes qui défilent
+
+            if (seconde <= 0) {
+                clearInterval(compteur);            //Arrête le setInterval
+                compteARebours.textContent = "";    //Compteur n'affiche plus de données
+                aleatoireTranslationX();
+                deplacerVoiture();
+                chronometre();
+            }
+        },1000);                                    //Intervale qui agit à chaque seconde (1000ms = 1sec)
+    }
 }
+
