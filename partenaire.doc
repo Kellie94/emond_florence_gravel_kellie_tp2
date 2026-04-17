@@ -32,3 +32,5 @@ Florence:
 Kellie:
 - J'ai ajouté le chronomètre et j'ai modifié le html pour mettre 00:00:000 pour voir l'emplacement des deux chronos avant le départ.
 - Je vais faire l'appel des fonctions demain avec l'arrêt du chrono lorsqu'une voiture arrive à la ligne d'arrivé.
+- j'ai réussi que les fonctions aleatoireTranslationX(); deplacerVoiture(); chronometre(); partent après le compte à rebours suite au click.
+- 
