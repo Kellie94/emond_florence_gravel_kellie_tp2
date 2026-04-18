@@ -29,15 +29,17 @@ Kellie:
 - J'ai fait un mini root.
 - J'ai suivis les directives du CSS dans le document jusqu'au F. Styles pour h1, mais je vois que la route et les autos sont très petits.
 
-- **** Tu peux modifier n'importe quoi dans ce que j'ai fait****
-
 Florence:
 - J'ai modifié le css pour embelir la page.
 - J'ai fait la fonction compteARebour.
-- Je vais commencer la fonction aleatoireTranslation et/ou deplacerVoiture ce soir.
+- Je vais commencer la fonction aleatoireTranslation.
 
 Kellie:
 - J'ai ajouté le chronomètre et j'ai modifié le html pour mettre 00:00:000 pour voir l'emplacement des deux chronos avant le départ.
 - Je vais faire l'appel des fonctions demain avec l'arrêt du chrono lorsqu'une voiture arrive à la ligne d'arrivé.
 - j'ai réussi que les fonctions aleatoireTranslationX(); deplacerVoiture(); chronometre(); partent après le compte à rebours suite au click.
 - Je n'ai pas réussi à faire arrêter les chronos pour les deux voitures.
+
+Florence:
+- Fonction aleatoireTranslation terminé. J'ai utilisé 
+- Fait fonction demarrer voiture.
