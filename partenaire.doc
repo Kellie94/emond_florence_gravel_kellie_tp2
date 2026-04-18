@@ -17,6 +17,7 @@ Contribution de Kellie:
 - Écriture du CSS.
 - Écriture du code de la fonction chronometre().
 - Écriture du code de la fonction demarrervoiture().
+- Écriture partielle du code de la fonction aleatoireTranslation().
 
 
 
@@ -41,5 +42,6 @@ Kellie:
 - Je n'ai pas réussi à faire arrêter les chronos pour les deux voitures.
 
 Florence:
-- Fonction aleatoireTranslation terminé. J'ai utilisé 
+- Fonction aleatoireTranslation terminé. 
+  *J'ai utilisé root.style.setProperty() pour modifier la valeur "left" des voitures car lorsque j'ai essayé d'utiliser la façon donné dans le tp, ça n'avait pas fonctionné correctement.
 - Fait fonction demarrer voiture.
