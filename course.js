@@ -25,17 +25,17 @@ function chronometre() {
     const TEMPSECOULE = Date.now() - DEBUTTEMPS;                    //Calcule les minutes, secondes et millisecondes entre le temps de départ et celui actuel
     const minutes = Math.floor(TEMPSECOULE / 60000);
     const secondes = Math.floor((TEMPSECOULE % 60000) / 1000);
-    const millisecondes = TEMPSECOULE % 1000;
+    const millisecondes = Math.floor((TEMPSECOULE % 1000) / 10);
 
     const TEMPS =                                                   //Permet d'écrire les chiffres en lettre et de placer des zeros dans les espaces "vides"
       String(minutes).padStart(2, "0") + ":" +
       String(secondes).padStart(2, "0") + ":" +
-      String(millisecondes).padStart(3, "0");
+      String(millisecondes).padStart(2, "0");
+
 
     TEMPSVOITUREBLEU.textContent = TEMPS;                           //Mise à jour des balises correspondantes des deux chronos pour la voiture bleu et rouge
-    TEMPSVOITUREROUGE.textContent = TEMPS;
-
-    requestAnimationFrame(update);                                  //Permet d'actualiser à chaque 60secondes
+    TEMPSVOITUREROUGE.textContent = TEMPS;                           //Mise à jour des balises correspondantes des deux chronos pour la voiture bleu et rouge
+    requestAnimationFrame(update);                                  //Permet d'actualiser à chaque 60x par secondes
   }
   update();
 }
@@ -65,7 +65,8 @@ function deplacerVoiture() {
         root.style.setProperty("--left-car2", translationX2 + "px");
 
         if (translationX1 >= maxTranslationX) {
-        root.style.setProperty("--left-car1", maxTranslationX + "px");  //Permet de faire la translation jusqu'à la ligne d'arrivée
+        root.style.setProperty("--left-car1", maxTranslationX + "px"); 
+         //Permet de faire la translation jusqu'à la ligne d'arrivée
         }
         if (translationX2 >= maxTranslationX) {
         root.style.setProperty("--left-car2", maxTranslationX + "px");
@@ -98,4 +99,3 @@ function demarrerCourse() {
         },1000);                                    //Intervale qui agit à chaque seconde (1000ms = 1sec)
     }
 }
-
