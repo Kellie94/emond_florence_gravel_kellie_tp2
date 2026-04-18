@@ -1,13 +1,22 @@
 Ce travail a été fait par Florence Emond et Kellie Gravel.
 
+Résumé des contributions: 
 
 Contribution de Florence:
-
+- Trouver les assets.
+- Fabrication des assets.
+- Embellissement du HTML.
+- Embellissement du CSS.
+- Écriture du code de la fonction compteARebour().
+- Écriture du code de la fonction aleatoireTranslation().
+- Écriture du code de la fonction deplacerVoiture().
 
 Contribution de Kellie:
-
-
-
+- Fabrications des assets.
+- Écriture du HTML.
+- Écriture du CSS.
+- Écriture du code de la fonction chronometre().
+- Écriture du code de la fonction demarrervoiture().
 
 
 
@@ -22,15 +31,13 @@ Kellie:
 
 - **** Tu peux modifier n'importe quoi dans ce que j'ai fait****
 
-
 Florence:
 - J'ai modifié le css pour embelir la page.
 - J'ai fait la fonction compteARebour.
 - Je vais commencer la fonction aleatoireTranslation et/ou deplacerVoiture ce soir.
 
-
 Kellie:
 - J'ai ajouté le chronomètre et j'ai modifié le html pour mettre 00:00:000 pour voir l'emplacement des deux chronos avant le départ.
 - Je vais faire l'appel des fonctions demain avec l'arrêt du chrono lorsqu'une voiture arrive à la ligne d'arrivé.
 - j'ai réussi que les fonctions aleatoireTranslationX(); deplacerVoiture(); chronometre(); partent après le compte à rebours suite au click.
-- 
+- Je n'ai pas réussi à faire arrêter les chronos pour les deux voitures.
